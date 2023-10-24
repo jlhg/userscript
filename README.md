@@ -6,6 +6,6 @@
 
 腳本發佈於 [Greasy Fork](https://greasyfork.org/zh-TW/users/79288-jlhg)。需先安裝使用者腳本管理器，如 [Violentmonkey](https://violentmonkey.github.io/)。
 
-# 授權條款
+## 授權條款
 
 MIT
