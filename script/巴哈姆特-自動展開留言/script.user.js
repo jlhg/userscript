@@ -16,7 +16,7 @@
 (function() {
   'use strict';
 
-  function wait(selector) {
+  function waitElement(selector) {
     return new Promise(resolve => {
       if (document.querySelector(selector)) {
         return resolve(document.querySelector(selector));
@@ -42,7 +42,7 @@
               .forEach((el) => el.click());
       break;
     case "gnn.gamer.com.tw":
-      wait('#comment a[href^="javascript:get_all_comment"]').then((e) => {
+      waitElement('#comment a[href^="javascript:get_all_comment"]').then((e) => {
         eval($(e).attr('href').split(':')[1]);
       });
       break;
