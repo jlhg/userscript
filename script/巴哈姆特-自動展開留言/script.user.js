@@ -2,7 +2,7 @@
 // @name         巴哈姆特-自動展開留言
 // @namespace    https://github.com/jlhg/userscript
 // @license      MIT
-// @version      0.2.0
+// @version      0.2.1
 // @description  自動展開巴哈姆特哈拉區、GNN新聞文章底下所有留言
 // @author       jlhg
 // @homepage     https://github.com/jlhg/userscript
