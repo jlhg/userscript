@@ -2,7 +2,7 @@
 // @name         4Gamers-自動展開留言
 // @namespace    https://github.com/jlhg/userscript
 // @license      MIT
-// @version      0.1.0
+// @version      0.1.1
 // @description  自動展開 4Gamers 新聞文章底下留言
 // @author       jlhg
 // @homepage     https://github.com/jlhg/userscript
