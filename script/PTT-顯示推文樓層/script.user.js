@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         PTT 顯示推文樓層
+// @name         PTT-顯示推文樓層
 // @namespace    https://github.com/jlhg/userscript
 // @license      MIT
 // @version      0.1.0
