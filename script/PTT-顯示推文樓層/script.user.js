@@ -2,7 +2,7 @@
 // @name         PTT-顯示推文樓層
 // @namespace    https://github.com/jlhg/userscript
 // @license      MIT
-// @version      0.1.2
+// @version      0.1.3
 // @description  顯示 PTT 的推文樓層數
 // @author       jlhg
 // @homepage     https://github.com/jlhg/userscript
@@ -22,10 +22,9 @@
       'margin-left: -62px;' +
       'padding-right: 12px;' +
       'text-align: right;' +
-      'font-family: monospace;' +
       'color: #808080;';
     el.textContent = level;
-    return el
+    return el;
   }
 
   const pushElements = document.querySelectorAll('.push');
