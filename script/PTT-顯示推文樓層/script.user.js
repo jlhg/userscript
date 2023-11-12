@@ -3,7 +3,7 @@
 // @namespace    https://github.com/jlhg/userscript
 // @license      MIT
 // @version      0.1.0
-// @description  PTT 顯示推文樓層
+// @description  顯示 PTT 的推文樓層數
 // @author       jlhg
 // @homepage     https://github.com/jlhg/userscript
 // @supportURL   https://github.com/jlhg/userscript/issues
