@@ -3,7 +3,7 @@
 // @name:zh-TW         Medium - 隱藏登入橫幅和蓋版註冊頁
 // @namespace          https://github.com/jlhg/userscript
 // @license            MIT
-// @version            0.1.0
+// @version            0.1.1
 // @description        Hide Medium websites' annoying login banner and signup overlay
 // @description:zh-TW  隱藏 Medium 網站惱人的登入橫幅及蓋版註冊頁
 // @author             jlhg
@@ -11,7 +11,6 @@
 // @supportURL         https://github.com/jlhg/userscript/issues
 // @match              https://medium.com/@*
 // @match              https://*.medium.com/*
-// @match              https://towardsdatascience.com/*
 // @grant              none
 // ==/UserScript==
 
@@ -73,18 +72,23 @@
     });
   }
 
-  waitElement('#credential_picker_container')
-    .then((el) => { el.hidden = true });
+  function run() {
+    waitElement('#credential_picker_container')
+      .then((el) => { el.remove(); });
 
-  waitElementsWithText('h2', 'Sign up to discover human stories')
-    .then((el) => {
-      el
-        .parentElement
-        .parentElement
-        .parentElement
-        .parentElement
-        .parentElement
-        .parentElement
-        .hidden = true
-    });
+    waitElementsWithText('h2', 'Sign up to discover human stories')
+      .then((el) => {
+        el
+          .parentElement
+          .parentElement
+          .parentElement
+          .parentElement
+          .parentElement
+          .parentElement
+          .remove();
+      });
+  }
+
+  window.addEventListener('click', run, false);
+  run();
 })();
