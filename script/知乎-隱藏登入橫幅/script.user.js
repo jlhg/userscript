@@ -37,6 +37,6 @@
     });
   }
 
-  waitElement(".Modal-closeButton").then((el) => el.click(); );
-  waitElement('.css-nk32ej').then((el) => el.hidden = true; );
+  waitElement('.Modal-closeButton').then((el) => { el.click(); });
+  waitElement('.css-nk32ej').then((el) => { el.hidden = true; });
 })();
