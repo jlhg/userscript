@@ -3,7 +3,7 @@
 // @name:zh-CN         知乎 - 隐藏登入横幅
 // @namespace          https://github.com/jlhg/userscript
 // @license            MIT
-// @version            0.1.0
+// @version            0.1.1
 // @description        隱藏知乎網站惱人的登入橫幅
 // @description:zh-CN  隐藏知乎网站恼人的登入横幅
 // @author             jlhg
@@ -38,5 +38,5 @@
   }
 
   waitElement('.Modal-closeButton').then((el) => { el.click(); });
-  waitElement('.css-nk32ej').then((el) => { el.hidden = true; });
+  waitElement('.css-nk32ej').then((el) => { el.remove(); });
 })();
