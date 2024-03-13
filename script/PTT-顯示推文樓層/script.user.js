@@ -2,7 +2,7 @@
 // @name         PTT-顯示推文樓層
 // @namespace    https://github.com/jlhg/userscript
 // @license      MIT
-// @version      0.1.3
+// @version      0.2.0
 // @description  顯示 PTT 的推文樓層數
 // @author       jlhg
 // @homepage     https://github.com/jlhg/userscript
@@ -29,7 +29,23 @@
 
   const pushElements = document.querySelectorAll('.push');
 
-  for (let i = 0; i < pushElements.length; i++) {
-    pushElements[i].prepend(createPushLevel(i + 1));
+  let pushCount = 0;
+  for (const pushElement of pushElements) {
+    pushElement.prepend(createPushLevel(++pushCount));
   }
+
+  const observer = new MutationObserver(mutations => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        for (const child of node.childNodes) {
+          if (child.className == "push") {
+            child.prepend(createPushLevel(++pushCount));
+          }
+        }
+      }
+    }
+  });
+
+  let mainContent = document.querySelector('#main-content');
+  observer.observe(mainContent, { childList: true, subtree: true });
 })();
