@@ -3,7 +3,7 @@
 // @name:zh-TW         Stack Exchange - 隱藏 Cookies 同意橫幅
 // @namespace          https://github.com/jlhg/userscript
 // @license            MIT
-// @version            0.1.1
+// @version            0.1.2
 // @description        Hide Stack Exchange websites' annoying cookies consent banner
 // @description:zh-TW  隱藏 Stack Exchange 網站惱人的 Cookies 同意橫幅
 // @author             jlhg
@@ -45,6 +45,6 @@
     });
   }
 
-  waitElement('.js-consent-banner')
+  waitElement('#onetrust-consent-sdk')
     .then((el) => { $(el).hide(); });
 })();
